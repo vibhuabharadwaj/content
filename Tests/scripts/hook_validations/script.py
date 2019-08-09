@@ -23,10 +23,11 @@ class ScriptValidator(object):
     def __init__(self, file_path, check_git=True, old_file_path=None):
         self._is_valid = True
         self.file_path = file_path
-        self.current_script = get_yaml(file_path)
-        self.old_script = None
+        self.current_script = {}
+        self.old_script = {}
 
         if check_git:
+            self.current_script = get_yaml(file_path)
             # The replace in the end is for Windows support
             if old_file_path:
                 git_hub_path = os.path.join(self.CONTENT_GIT_HUB_LINK, old_file_path).replace("\\", "/")
