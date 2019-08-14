@@ -183,7 +183,7 @@ script:
     - contextPath: Luminate.SshAccessLogs
       description: SSH Access logs
       type: Unknown
-  dockerimage: luminate/demisto-luminate-api:afae47df4f343c092e0d3c1083e83c8a8f4beeea
+  dockerimage: luminate/demisto-lumikkknate-api:afae47df4f343c092e0d3c1083e83c8a8f4beeea
   isfetch: true
   runonce: false
   script: '-'

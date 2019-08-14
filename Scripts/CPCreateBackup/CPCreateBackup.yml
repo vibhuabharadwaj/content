@@ -6,6 +6,13 @@ args:
   name: devices
   required: true
   secret: false
+- default: true
+  description: List of RemoteAccess instances of the checkpoint firewall appliances
+    to back up
+  isArray: false
+  name: devices2
+  required: true
+  secret: false
 comment: Connect to a checkpoint firewall appliance using SSH and trigger a task to
   create a configuration backup of the device. The user account being used to access
   the device must be set to use the SSH shell and not the built in Checkpoint CLI.
