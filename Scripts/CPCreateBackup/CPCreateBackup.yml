@@ -1,0 +1,27 @@
+args:
+- default: true
+  description: List of RemoteAccess instances of the checkpoint firewall appliances
+    to back up
+  isArray: false
+  name: devices
+  required: true
+  secret: false
+comment: Connect to a checkpoint firewall appliance using SSH and trigger a task to
+  create a configuration backup of the device. The user account being used to access
+  the device must be set to use the SSH shell and not the built in Checkpoint CLI.
+  Consult the Checkpoint documentation for instructions on how to do this.
+commonfields:
+  id: CPCreateBackup
+  version: -1
+enabled: true
+name: CPCreateBackup
+script: '-'
+system: false
+tags:
+- checkpoint
+timeout: 0s
+type: python
+dependson:
+  must:
+  - ssh
+deprecated: true
